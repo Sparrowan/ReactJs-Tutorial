@@ -19,12 +19,70 @@ import "./appStyles.css";
 import styles from "./appStyles.module.css";
 import Form from "./Components/Form";
 import LifecycleA from "./Components/LifecycleA";
+import Table from "./Components/Table";
+import FragmentDemo from "./Components/FragmentDemo";
+import ParentComp from "./Components/ParentComp";
+import RefsDemo from "./Components/RefsDemo";
+import FocusInput from "./Components/FocusInput";
+import ForwardRefParent from "./Components/ForwardRefParent";
+import PortalDemo from "./Components/PortalDemo";
+import Hero from "./Components/Hero";
+import ErrorBoundary from "./Components/ErrorBoundary";
+import ChildChildren1 from "./Components/ChildChildren1";
+import ParentChildren from "./Components/ParentChildren";
+import ChildChildren2 from "./Components/ChildChildren2";
+import ClickCounter from "./Components/ClickCounter";
+import HoverCounter from "./Components/HoverCounter";
+import HoverCounterTwo from "./Components/HoverCounterTwo";
+import ClickCounterTwo from "./Components/ClickCounterTwo";
+import User from "./Components/User";
+import CounterTwo from "./Components/CounterTwo";
+import ComponentC from "./Components/ComponentC";
+import { UserProvider } from "./Components/userContext";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <LifecycleA />
+        <UserProvider value="Alphius">
+          <ComponentC />
+        </UserProvider>
+        {/* <CounterTwo/> */}
+        {/* <CounterTwo>
+          {(count, incrementCount) => (
+            <ClickCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
+
+        <CounterTwo>
+          {(count, incrementCount) => (
+            <HoverCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo> */}
+        {/* <User render={(isLoggedIn) =>isLoggedIn ? "Alphius" :"Guest"} /> */}
+        {/* <HoverCounter /> */}
+        {/* <ClickCounter name="Alphius" /> */}
+        {/* <ParentChildren >
+        <ChildChildren1 />
+        <ChildChildren2 />
+        </ParentChildren> */}
+        {/* <ErrorBoundary>
+          <Hero heroName="Batman" />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="Superman" />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="Joker" />
+        </ErrorBoundary> */}
+        {/* <PortalDemo /> */}
+        {/* <ForwardRefParent /> */}
+        {/* <FocusInput /> */}
+        {/* <RefsDemo /> */}
+        {/* <ParentComp /> */}
+        {/* <FragmentDemo /> */}
+        {/* <Table /> */}
+        {/* <LifecycleA /> */}
         {/* <Form /> */}
         {/* <h1 className="error">Error</h1>
         <h1 className={styles.success}>Success</h1> */}
